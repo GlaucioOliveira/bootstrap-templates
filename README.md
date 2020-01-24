@@ -1,2 +1,2 @@
 # bootstrap-templates
-Bootstrap Templates
+Bootstrap Templates.
