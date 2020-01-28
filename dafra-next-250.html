@@ -19,13 +19,32 @@
     </style>
   </head>
   <body>
-    <nav class="navbar sticky-top navbar-dark bg-dark">
+    <div class="sticky-top">
+    <nav class="navbar navbar-dark bg-dark">
       <a class="navbar-brand" href="#"><i class="fa fa-wrench"></i> Peça Compatível</a>
    
       
-      <!-- <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Moto/Modelo/Peça" aria-label="Search">
+     <!-- <form class="form-inline my-2 my-lg-0"> -->
+
+      <form class="form-inline">
+        <div class="input-group">
+          <div class="input-group-prepend">
+            <span class="input-group-text" id="basic-addon1">Buscar</span>
+          </div>
+          <input type="text" class="form-control" placeholder="Moto/Modelo/Peça" aria-label="Moto/Modelo/Peça" aria-describedby="button-addon1">
+        </div>
+      </form>
+     
+      <!-- <div class="form-inline input-group mb-1">
+        <input type="text" class="form-control" placeholder="Moto/Modelo/Peça" aria-label="Moto/Modelo/Peça" aria-describedby="button-addon2">
+        <div class="input-group-append">
+          <button class="btn btn-outline-secondary" type="button" id="button-addon2">Buscar</button>
+        </div>
+      </div> -->
+
+        <!-- <input class="form-control mr-sm-2" type="search" placeholder="Moto/Modelo/Peça" aria-label="Search">
         <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button> -->
+
         <!-- TODO: Ver como ajustar o dropdown quando fica o canto da tela.
           
           <div class="dropdown">
@@ -38,9 +57,10 @@
             <button class="dropdown-item" type="button">Modelo</button>
             <button class="dropdown-item" type="button">Marca</button>
           </div>
-        </div> -->
+        </div> 
 
       </form>
+      -->
 
     </nav>
 
@@ -48,17 +68,22 @@
     
     <nav aria-label="breadcrumb">
       <ol class="breadcrumb">
-        <li class="breadcrumb-item"><a href="#">Início</a></li>
+        <li class="breadcrumb-item"><a href="index.html">Início</a></li>
         <li class="breadcrumb-item"><a href="#">Moto</a></li>
         <li class="breadcrumb-item"><a href="#">Dafra</a></li>
         <li class="breadcrumb-item active" aria-current="page">Next 250</li>
       </ol>
     </nav>
+  </div>
 
-    <div class="container">
-    <div class="text-center">
+     <div class="container">
+
+    <!-- 
+      Incluir no futuro...
+      <div class="text-center">
       <img src="next250.png" class="img-fluid rounded" alt="Dafra - Next 250">
-    </div>
+    </div>  
+    -->
     
 
     <table class="table table-striped">
