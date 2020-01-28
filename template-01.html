@@ -9,14 +9,26 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" crossorigin="anonymous">
     <title>Peça Compativel</title>
+    <style>
+      .back-to-top {
+          position: fixed;
+          bottom: 25px;
+          right: 25px;
+          display: none;
+      }   
+    </style>
   </head>
   <body>
-    <nav class="navbar navbar-dark bg-dark">
+    <nav class="navbar sticky-top navbar-dark bg-dark">
       <a class="navbar-brand" href="#"><i class="fa fa-wrench"></i> Peça Compatível</a>
-      <form class="form-inline my-2 my-lg-0">
-        <input class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-        <!-- <button class="btn btn-info my-2 my-sm-0" type="submit">Buscar</button> -->
-        <div class="dropdown">
+   
+      
+      <!-- <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Moto/Modelo/Peça" aria-label="Search">
+        <button class="btn btn-secondary my-2 my-sm-0" type="submit">Buscar</button> -->
+        <!-- TODO: Ver como ajustar o dropdown quando fica o canto da tela.
+          
+          <div class="dropdown">
           <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenu2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
             Peça
           </button>
@@ -26,9 +38,10 @@
             <button class="dropdown-item" type="button">Modelo</button>
             <button class="dropdown-item" type="button">Marca</button>
           </div>
-        </div>
+        </div> -->
 
       </form>
+
     </nav>
 
     <!-- <h1>Hello, world!</h1> -->
@@ -42,6 +55,7 @@
       </ol>
     </nav>
 
+    <div class="container">
     <div class="text-center">
       <img src="next250.png" class="img-fluid rounded" alt="Dafra - Next 250">
     </div>
@@ -127,11 +141,35 @@
       <button type="button" class="btn btn-secondary">Adicionar Peça Alternativa</button>
     </div>
     <br/>
- 
+  </div>
+
+  
+  <a id="back-to-top" href="#" class="btn btn-light btn-lg back-to-top" role="button"><i class="fas fa-chevron-up"></i></a>
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+
+    <script>
+      $(document).ready(function(){
+	$(window).scroll(function () {
+			if ($(this).scrollTop() > 50) {
+				$('#back-to-top').fadeIn();
+			} else {
+				$('#back-to-top').fadeOut();
+			}
+		});
+		// scroll body to 0px on click
+		$('#back-to-top').click(function () {
+			$('body,html').animate({
+				scrollTop: 0
+			}, 400);
+			return false;
+		});
+});
+    </script>
   </body>
 </html>
